@@ -1,0 +1,62 @@
+<br>
+<div class="container p-3 mb-2 bg-dark text-white rounded-3 ">DIGITE ADN [ATCGA]</div>
+
+<div class="container p-3 mb-2 bg-dark text-white border border-danger rounded-3">
+  <form #formTemplate="ngForm" (ngSubmit)="SaveData(formTemplate)">
+    <div class="row align-items-start">
+      <div class="col mb-3">
+        <label class="form-label">ADN1</label>
+        <input type="text" class="form-control" id="dna1" minlength="5" maxlength="5" name="dna1" ngModel
+          [placeholder]="digiteAdn">
+        <small class="text-danger">[A,T,C,G,A]</small>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label">ADN2</label>
+        <input type="text" class="form-control" id="dna2" minlength="5" maxlength="5" name="dna2" ngModel
+          [placeholder]="digiteAdn">
+        <small class="text-danger">[A,T,C,G,A]</small>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label">ADN3</label>
+        <input type="text" class="form-control" id="dna3" minlength="5" maxlength="5" name="dna3" ngModel
+          [placeholder]="digiteAdn">
+        <small class="text-danger">[A,T,C,G,A]</small>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label">ADN4</label>
+        <input type="text" class="form-control" id="dna4" minlength="5" maxlength="5" name="dna4" ngModel
+          [placeholder]="digiteAdn">
+        <small class="text-danger">[A,T,C,G,A]</small>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label">ADN5</label>
+        <input type="text" class="form-control" id="dna5" minlength="5" maxlength="5" name="dna5" ngModel
+          [placeholder]="digiteAdn">
+        <small class="text-danger">[A,T,C,G,A]</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <label class="form-label">{{existeReg}}</label>
+
+  </form>
+</div>
+
+<br>
+<div class="container p-3 mb-2 bg-dark text-white rounded-3 w-50">ESTADISTICA</div>
+<div class="container p-3 mb-2 bg-dark text-white border border-danger w-50 rounded-3">
+  <div class="row align-items-start ">
+    <div class="col">
+      <label class="form-label">HUMANOS</label>
+      <div> {{estadistica.humanosAdn}}</div>
+    </div>
+    <div class="col">
+      <label class="form-label">MUTANTES</label>
+      <div>{{estadistica.mutantesAdn}}</div>
+    </div>
+    <div class="col">
+      <label class="form-label">RATIO</label>
+      <div>{{estadistica.ratio}}</div>
+    </div>
+  </div>
+</div>
